@@ -1,0 +1,218 @@
+* {
+  /* resetting default margins and paddings */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  /* setting a font family */
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+
+  /* aligning the page to center horizontally */
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+    width: 1344px;
+}
+
+header {
+  width: 100%;
+  border: 2px solid black;
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.header-left img {
+    width: 3rem;
+    height: 3rem;
+}
+
+.header-left p {
+    font-size: 18px;
+    height: 3rem;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-right p {
+    font-size: 18px;
+    /* width 80% to break the sentence  */
+    width: 80%;
+    text-align: center;
+}
+
+main {
+    width: 100%;
+    /* border-top already has a border from header */
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+    
+    /* header + footer heights are 11rems in total. So the main height should be 100vh - 11rem  */
+    height: calc(100vh - 11rem);
+    display: flex;
+    padding: 0 1rem;
+}
+
+.left-section {
+    display: flex;  
+    flex-direction: column;
+    height: 100%;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+    border-right: 2px solid black;
+}
+
+.money-icon {
+    width: 40%;
+    height: 3rem;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 4px;
+}
+
+.money-icon img {
+    width: 3rem;
+    height: 100%;
+}
+
+article {
+    flex: 2;
+    height: 100%;
+    border-right: 2px solid black;
+    overflow: hidden;
+}
+
+.top {
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid black;
+    
+    /* instead of typing directly uppercase letters, this is better for SEO */
+    text-transform: uppercase;
+}
+
+.bottom {
+    padding: 1rem 5rem;
+    height: calc(100% - 5rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text-container h2 {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.bottom img {
+    width: 3rem;
+    height: 3rem;
+}
+
+.right-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.profile {
+    width: 80%;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.profile img {
+    width: 3rem;
+    height: 3rem;
+}
+
+.profile a {
+    color: black;
+    text-transform: uppercase;
+}
+
+.profile h4 {
+    text-transform: uppercase;
+}
+
+.transaction {
+    border: 2px solid black;
+    width: 100%;
+    height: 2rem;
+}
+
+footer {
+    width: 100%;
+    height: 6rem;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.links {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.link-container {
+    display: flex;
+    flex-direction: column;
+    height: 3rem;
+    justify-content: space-around;
+    padding: 0 1rem;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+.link-container a:nth-child(1) {
+    color: black;
+}
+
+.link-container a:nth-child(2) {
+    color: gray;
+}
