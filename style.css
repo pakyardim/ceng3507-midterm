@@ -15,23 +15,25 @@ a {
 body {
     width: 100vw;
     height: 100vh;
-
-  /* aligning the page to center horizontally */
-  display: flex;
-  justify-content: center;
 }
 
-.container {
+.header-container, .main-container, .footer-container {
     width: 1344px;
 }
 
 header {
   width: 100%;
-  border: 2px solid black;
   height: 5rem;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 1rem;
+  background-color: #333f57;
+  color: white;
+}
+
+.header-container {
+    padding: 0 1rem;
+    display: flex;
+    margin: auto; /* to center the container */
+    justify-content: space-between;
+    height: 100%;
 }
 
 .header-left {
@@ -47,7 +49,6 @@ header {
 
 .header-left p {
     font-size: 18px;
-    height: 3rem;
 }
 
 .header-right {
@@ -64,15 +65,19 @@ header {
 
 main {
     width: 100%;
-    /* border-top already has a border from header */
-    border-right: 2px solid black;
-    border-bottom: 2px solid black;
-    border-left: 2px solid black;
-    
+
     /* header + footer heights are 11rems in total. So the main height should be 100vh - 11rem  */
     height: calc(100vh - 11rem);
-    display: flex;
+}
+
+/* select main's container */
+.main-container {
+    margin: auto; /* to center the container */
     padding: 0 1rem;
+    display: flex;
+
+    height: 100%;
+    color: #333f57;
 }
 
 .left-section {
@@ -83,7 +88,6 @@ main {
     justify-content: space-between;
     align-items: center;
     padding: 2rem 0;
-    border-right: 2px solid black;
 }
 
 .money-icon {
@@ -105,7 +109,6 @@ main {
 article {
     flex: 2;
     height: 100%;
-    border-right: 2px solid black;
     overflow: hidden;
 }
 
@@ -186,6 +189,14 @@ footer {
     border-right: 2px solid black;
     border-bottom: 2px solid black;
     border-left: 2px solid black;
+    background-color: #333f57;
+    color: white;
+}
+
+.footer-container {
+    margin: auto; /* to center the container */
+    padding: 0 1rem;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -210,7 +221,7 @@ footer {
 }
 
 .link-container a:nth-child(1) {
-    color: black;
+    color: white;
 }
 
 .link-container a:nth-child(2) {
